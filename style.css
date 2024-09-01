@@ -288,6 +288,7 @@ footer a img {
 	background-color: #fdffef;
 	z-index: 0;
 	position: relative;
+	padding-bottom: 5vw;
 }
 
 #news-body > * {
@@ -317,8 +318,9 @@ footer a img {
 	margin-bottom: 100px;
 	width: 100%;
 	height: 1px;
-	background: gray;
-	border: 0;
+	background: black;
+	border: 1px;
+	border-color: gray;
 }
 
 #image-overlay {
