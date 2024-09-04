@@ -85,6 +85,12 @@ header {
 	src: url("/fonts/Libre_Caslon_Text/LibreCaslonText-Regular.ttf");
 }
 
+@font-face {
+	font-family: Wix;
+	/*font-weight: bolder;*/
+	src: url("/fonts/Wix_Madefor_Text/WixMadeforText-VariableFont_wght.ttf");
+}
+
 .section-title {
 	font-size: 72px;
 	text-align: center;
@@ -103,30 +109,63 @@ header {
 	flex-direction: column;
 }
 
+#services-arrows {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.scroll-button {
+    background-color: transparent;
+    color: gray;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+#scroll-left {
+    position: absolute;
+    left: 0;
+}
+
+#scroll-right {
+    position: absolute;
+    right: 0;
+}
+
+
 #service-boxes {
+	font-family: Wix;
+	font-size: 16px;
 	display: flex;
-	gap: 50px;
-	justify-content: center;
+	gap: 48px;
+	/*justify-content: center;*/
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    /*width: calc(100% - 100px);*/ /* Adjusting width to accommodate arrows */
 }
 
 .service-box {
 	border: 1px solid black;
-	/*min-height: 200px;*/
-	width: 400px;
+	height: 200px;
+	min-width: 360px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 25px;
+	padding: 32px;
 	gap: 15px;
+	text-align: center;
 	/*justify-content: center;*/
 }
 
-.service-box:hover {
+/*.service-box:hover {
 	transform: scale(1.05);
-}
+}*/
 
 .service-title {
-	font-size: 22px;
+	font-size: 24px;
 	font-weight: light;
 }
 
@@ -145,6 +184,7 @@ header {
 	height: 600px;
 	margin: 60px;
 	gap: 40px;
+	font-family: Wix;
 }
 
 #event-text {
@@ -152,13 +192,14 @@ header {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	gap: 30px;
+	/*gap: 30px;*/
 	padding: 40px;
 	box-sizing: border-box;
 }
 
 #event-title {
-	font-size: 32px;
+	font-size: 48px;
+	margin-bottom: 30px;
 }
 
 #event-image {
@@ -177,6 +218,7 @@ header {
 	margin-top: 60px;
 	width: 100%;
 	gap: 40px;
+	font-family: Wix;
 }
 
 .new {
@@ -307,10 +349,9 @@ footer a img {
 }
 
 #new-cover-title {
-	font-size: 120px;
+	/*font-size: 120px;*/
 	max-width: 100%;
-	
-	-webkit-text-stroke: #f8f8f8 2px;
+	-webkit-text-stroke: #f8f8f8 1px;
 }
 
 #title-line {
@@ -337,4 +378,5 @@ footer a img {
   #news-description {
 	font-size: xx-large;
 	text-align: justify;
+	font-family: Wix;
   }

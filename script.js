@@ -42,3 +42,25 @@ document.querySelectorAll('.new').forEach(function(newsItem) {
     const href = `news.html?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&src=${encodeURIComponent(imgSource)}`;
     linkElement.setAttribute('href', href);
 });
+
+/*
+Scrolling for services.
+*/
+const scrollLeftButton = document.getElementById('scroll-left');
+const scrollRightButton = document.getElementById('scroll-right');
+const serviceBoxes = document.getElementById('service-boxes');
+
+scrollLeftButton.addEventListener('click', () => {
+    serviceBoxes.scrollBy({
+        left: -500, // Adjust the value to scroll the desired amount
+        behavior: 'smooth'
+    });
+});
+
+scrollRightButton.addEventListener('click', () => {
+    serviceBoxes.scrollBy({
+        left: 500, // Adjust the value to scroll the desired amount
+        behavior: 'smooth'
+    });
+});
+
