@@ -27,9 +27,19 @@ header {
 	right: 0.5cm;
 }
 
+header a img {
+	height: 16px;
+}
+
+header a {
+	display: flex;
+	align-items: center;
+}
+
 #right-header {
 	display: flex;
 	gap: 20px;
+	align-items: center;
 }
 
 #main {
