@@ -76,13 +76,17 @@ header a {
 	line-height: 1.2;
 }
 
-
 #subtitle {
-	/*font-size: 5vw;*/
-	font-size: 32px;
+	font-size: 3vw;
+	/*font-size: 32px;*/
 	margin-top: 1.5cm;
-	font-weight: bolder;
+	/*font-weight: bolder;*/
 	-webkit-text-stroke: whitesmoke 0.25px;
+}
+
+span {
+	/*background-color: #fdffef;*/
+	background-color: rgba(253, 255, 239, 0.2);
 }
 
 #cover-image {
@@ -432,6 +436,9 @@ footer a img {
   }
 
   @media (max-width: 800px) {
+	#subtitle {
+		font-size: 32px;
+	}
 	.section-title {
 		text-align: center;
 	}
