@@ -166,7 +166,7 @@ header a {
 
 .service-box {
 	border: 1px solid black;
-	height: 240px;
+	height: 280px;
 	width: 100%;
 	/*min-width: 360px;*/
 	max-width: 480px;
@@ -194,6 +194,11 @@ header a {
 .service-description {
 	text-align: justify;
 	text-align-last: center;
+}
+
+.service-box a {
+	background-color: #eec355;
+	padding: 11px;
 }
 
 #upcoming-events {
@@ -288,10 +293,13 @@ header a {
 	background-color: #f8f8f8;
 	display: flex;
 	justify-content: space-between;
+	position: relative;
+	/*height: auto;
+	min-height: 300px;*//
 }
 
 #left-section {
-	width: 30vw;
+	width: 40vw;
 	font-size: 16px;
 	gap: 30px;
 	display: flex;
@@ -309,7 +317,7 @@ header a {
 }
 
 #about-right-image {
-	max-width: 30vw;
+	max-width: 40vw;
 	max-height: calc(30vw/467*520);
 	object-fit: cover;
 }
