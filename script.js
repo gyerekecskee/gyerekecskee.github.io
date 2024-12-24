@@ -37,9 +37,10 @@ document.querySelectorAll('.new').forEach(function(newsItem) {
     const linkElement = newsItem;
     const imgElement = newsItem.querySelector('img');
     const imgSource = imgElement.src;
+    const vidSource = imgElement.alt;
 
     // Generate href dynamically
-    const href = `news.html?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&src=${encodeURIComponent(imgSource)}`;
+    const href = `news.html?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&src=${encodeURIComponent(imgSource)}&vSrc=${encodeURIComponent(vidSource)}`;
     linkElement.setAttribute('href', href);
 });
 

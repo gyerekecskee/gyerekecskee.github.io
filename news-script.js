@@ -7,13 +7,31 @@ function loadNews() {
     const title = getQueryParameter('title');
     const description = getQueryParameter('description');
     const src = getQueryParameter('src');
-    if (title && description && src) {
+    const vSrc = getQueryParameter('vSrc');
+
+    if (vSrc) {
+        if (vSrc == "nv") {
+            console.log("removing video");
+            document.getElementById('news-video').remove();
+        } else {
+            document.getElementById('news-video').src = "videos/" + decodeURIComponent(vSrc) + ".mp4";
+            console.log(vSrc);
+        }
+    } 
+    if (title) {
         document.getElementById('new-cover-title').textContent = decodeURIComponent(title);
+    } else {
+        document.getElementById('new-cover-title').textContent = "News title not found";
+    }
+    if (description) {
         document.getElementById('news-description').textContent = decodeURIComponent(description);
+    } else {
+        document.getElementById('news-description').textContent = "We couldn't find the news description you're looking for.";
+    }
+    if (src) {
         document.getElementById('news-image').src = decodeURIComponent(src);
     } else {
-        document.getElementById('new-cover-title').textContent = "News not found";
-        document.getElementById('news-description').textContent = "We couldn't find the news item you're looking for.";
+        document.getElementById('new-cover-title').textContent = "News image source not found";
     }
 }
 
