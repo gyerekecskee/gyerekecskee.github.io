@@ -10,11 +10,14 @@ function loadNews() {
     const vSrc = getQueryParameter('vSrc');
 
     if (vSrc) {
-        document.getElementById('news-video').src = "videos/" + decodeURIComponent(vSrc) + ".mp4";
-        console.log(vSrc);
-    } else {
-        
-    }
+        if (vSrc == "nv") {
+            console.log("removing video");
+            document.getElementById('news-video').remove();
+        } else {
+            document.getElementById('news-video').src = "videos/" + decodeURIComponent(vSrc) + ".mp4";
+            console.log(vSrc);
+        }
+    } 
     if (title) {
         document.getElementById('new-cover-title').textContent = decodeURIComponent(title);
     } else {
