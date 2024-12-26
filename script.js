@@ -75,9 +75,15 @@ const feedback = document.getElementById('f1');
 let typingTimer;
 
 // Add input event listener with debouncing
-input.addEventListener('input', function() {
-    clearTimeout(typingTimer);
-    typingTimer = setTimeout(check1Answer, 300); // Wait 300ms after user stops typing
+//input.addEventListener('input', function() {
+//    clearTimeout(typingTimer);
+//    typingTimer = setTimeout(check1Answer, 300); // Wait 300ms after user stops typing
+//});
+
+input.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        check1Answer();
+    }
 });
 
 function check1Answer() {
@@ -92,10 +98,10 @@ function check1Answer() {
             feedback.textContent = "Please enter a valid number";
             feedback.className = 'feedback incorrect';
         } else if (userAnswer === correctAnswer) {
-            feedback.textContent = "Jó válasz. Bét sámmáj szerint első nap kell nyolc gyertyát gyújtani és minded nap eggyel kevesebbet. Mi bét Hillél szerint csináljuk. Ehhez a kérdéshez tartozó betű a CS.";
+            feedback.textContent = "Jó válasz. Bét Sámmáj szerint első nap kell nyolc gyertyát gyújtani és minded nap eggyel kevesebbet. Mi Bét Hillél szerint csináljuk.Az ehhez a kérdéshez tartozó betű a CS.";
             feedback.className = 'feedback correct';
         } else {
-            feedback.textContent = "Hibás";
+            feedback.textContent = "Rossz válasz";
             feedback.className = 'feedback incorrect';
         }
     } else {
