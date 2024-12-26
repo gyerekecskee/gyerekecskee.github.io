@@ -65,3 +65,40 @@ scrollRightButton.addEventListener('click', () => {
     });
 });
 
+
+/*
+Hanuka kvíz
+*/
+const correctAnswer = 8;
+const input = document.getElementById('a1');
+const feedback = document.getElementById('f1');
+let typingTimer;
+
+// Add input event listener with debouncing
+input.addEventListener('input', function() {
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(check1Answer, 300); // Wait 300ms after user stops typing
+});
+
+function check1Answer() {
+    const userAnswer = parseInt(input.value);
+    console.log(userAnswer);
+    console.log(input.value);
+    if (input.value.length > 0) {
+        feedback.style.opacity = '1';
+        
+        if (isNaN(userAnswer)) {
+            console.log("nan");
+            feedback.textContent = "Please enter a valid number";
+            feedback.className = 'feedback incorrect';
+        } else if (userAnswer === correctAnswer) {
+            feedback.textContent = "Jó válasz. Bét sámmáj szerint első nap kell nyolc gyertyát gyújtani és minded nap eggyel kevesebbet. Mi bét Hillél szerint csináljuk. Ehhez a kérdéshez tartozó betű a CS.";
+            feedback.className = 'feedback correct';
+        } else {
+            feedback.textContent = "Hibás";
+            feedback.className = 'feedback incorrect';
+        }
+    } else {
+        feedback.style.opacity = '0';
+    }
+}
