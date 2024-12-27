@@ -280,7 +280,7 @@ const isCorrect = selectedOptions.length === correctAnswers.length &&
 // Show feedback
 const feedback = document.getElementById('f3');
 if (isCorrect) {
-    feedback.textContent = 'Helyes válasz! Juditról itt tudtok többet olvasni: https://hu.wikipedia.org/wiki/Judit_k%C3%B6nyve';
+    feedback.textContent = 'Helyes válasz! Juditról itt tudtok többet olvasni: https://hu.wikipedia.org/wiki/Judit_k%C3%B6nyve Az ehhez a kéréshez tartozó betű az O.';
     feedback.classList.add('correct');
     feedback.classList.remove('incorrect');
 } else {
