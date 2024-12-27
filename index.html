@@ -128,6 +128,83 @@
                     <button onclick="check1Answer()">Ellenőrzés</button>
                     <div id="f1" class="feedback">Hibás</div>
                 </div>
+                <div class="question-group">
+                    <div class="question">
+                        A nyolcadik napon milyen sorrendben szokás meggyújtani a gyertyákat?
+                    </div>
+                    <img id="h-numbers" src="pictures/hanukia-8.jpg" alt="hanukia-with-numbered candles">
+                    <div id="list">
+                        <div class="item" draggable="true" data-value="1">
+                            <span class="drag-handle"></span>
+                            <span class="text">4</span>
+                        </div>
+                        <div class="item" draggable="true" data-value="2">
+                            <span class="drag-handle"></span>
+                            <span class="text">6</span>
+                        </div>
+                        <div class="item" draggable="true" data-value="3">
+                            <span class="drag-handle"></span>
+                            <span class="text">2</span>
+                        </div>
+                        <div class="item" draggable="true" data-value="4">
+                            <span class="drag-handle"></span>
+                            <span class="text">3</span>
+                        </div>
+                        <div class="item" draggable="true" data-value="5">
+                            <span class="drag-handle"></span>
+                            <span class="text">Samas</span>
+                        </div>
+                        <div class="item" draggable="true" data-value="6">
+                            <span class="drag-handle"></span>
+                            <span class="text">1</span>
+                        </div>
+                        <div class="item" draggable="true" data-value="7">
+                            <span class="drag-handle"></span>
+                            <span class="text">7</span>
+                        </div>
+                        <div class="item" draggable="true" data-value="8">
+                            <span class="drag-handle"></span>
+                            <span class="text">8</span>
+                        </div>
+                        <div class="item" draggable="true" data-value="9">
+                            <span class="drag-handle"></span>
+                            <span class="text">5</span>
+                        </div>
+                    </div>
+                    <button onclick="checkOrder()">Ellenőrzés</button>
+                    <div id="f2" class="feedback">Hibás</div>
+                </div>
+                <div class="question-group">
+                    <form id="quiz-form">
+                        
+                        <div class="question">
+                            Ha valaki sajtos latkét (tócsnit) eszik Hanukakor mire emlékezik?
+                        </div>
+                            <div class="options">
+                                <br>
+                                <div class="option">
+                                    <input type="checkbox" id="q1a" name="q1" value="a">
+                                    <label for="q1a">Nyolc napig égett egy napnyi olaj, ezért olajos ételeket eszünk</label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="q1b" name="q1" value="b">
+                                    <label for="q1b">Juditnak sajttal sikerült megmentetnie a zsidókat</label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="q1c" name="q1" value="c">
+                                    <label for="q1c">Az orosz progromok idején terjedt el ez a szokás, az oroszországi zsidók olyan szegényke lettek, hogy nem tudták megengedni maguknat a fánkot, ezért az olcsóbb "krumplifánkra" váltottak. Ezt a világ zsidósága szolidaritásból követte.</label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="q1d" name="q1" value="d">
+                                    <label for="q1d">Mikor még drágább volt az olaj, előszőr a tócsnikat készítették el majd a maradékot használták fel a gyertyagyújtáshoz.</label>
+                                </div>
+                            </div>
+                        
+            
+                        <button type="submit" class="submit-btn">Ellenőrzés</button>
+                        <div id="f3" class="feedback">Hibás</div>
+                    </form>
+                </div>
             </div>
         </div>
         <div id="news">
