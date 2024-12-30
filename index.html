@@ -175,8 +175,7 @@
                     <div id="f2" class="feedback">Hibás</div>
                 </div>
                 <div class="question-group">
-                    <form id="quiz-form">
-                        
+                    <form class="quiz-form" id="latke-form">     
                         <div class="question">
                             Ha valaki sajtos latkét (tócsnit) eszik Hanukakor mire emlékezik?
                         </div>
@@ -204,6 +203,59 @@
                         <button type="submit" class="submit-btn">Ellenőrzés</button>
                         <div id="f3" class="feedback">Hibás</div>
                     </form>
+                </div>
+                <div class="question-group">
+                    <form id="kosher-form" class="quiz-form">     
+                        <div class="question">
+                            Válaszd ki ezek közül a kóser hanukiákat!
+                        </div>
+                            <div class="options" id="kosher-options">
+                                <div class="option">
+                                    <input type="checkbox" id="q2a" name="q2" value="a">
+                                    <label for="q2a"><img class="kosher-img" src="pictures/h1.jpg" alt="colored-hanukia"></label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="q2b" name="q2" value="b">
+                                    <label for="q2b"><img class="kosher-img" src="pictures/h2.jpeg" alt="colored-hanukia"></label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="q2c" name="q2" value="c">
+                                    <label for="q2c"><img class="kosher-img" src="pictures/h3.jpg" alt="stone-hanukia"></label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="q2d" name="q2" value="d">
+                                    <label for="q2d"><img class="kosher-img" src="pictures/h4.jpg" alt="colored-hanukia"></label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="q2e" name="q2" value="e">
+                                    <label for="q2e"><img class="kosher-img" src="pictures/h5.webp" alt="colored-hanukia"></label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="q2f" name="q2" value="f">
+                                    <label for="q2f"><img class="kosher-img" src="pictures/h6.jpeg" alt="stone-hanukia"></label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="q2g" name="q2" value="g">
+                                    <label for="q2g"><img class="kosher-img" src="pictures/h7.jpeg" alt="colored-hanukia"></label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="q2h" name="q2" value="h">
+                                    <label for="q2h"><img class="kosher-img" src="pictures/h8.jpeg" alt="stone-hanukia"></label>
+                                </div>
+                            </div>
+                        
+            
+                        <button type="submit" class="submit-btn">Ellenőrzés</button>
+                        <div id="f4" class="feedback">Hibás</div>
+                    </form>
+                </div>
+                <div class="question-group">
+                    <div class="question">
+                        Miért nyolc napig tart hanuka, hiszen "csak" 7 napnyi csoda történt. Az nem volt csoda hogy egy napig égett az egynapnyi olaj, vagy mégis?
+                    </div>
+                    <input type="text" id="a5" placeholder="Itt válaszolj">
+                    <button onclick="check5Answer()">Ellenőrzés</button>
+                    <div id="f5" class="feedback">Hibás</div>
                 </div>
             </div>
         </div>
