@@ -354,3 +354,37 @@ function check5Answer() {
         //}
     }
 }
+
+/*
+h6
+*/
+document.getElementById('hallel-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Add your logic here to process the answers
+    //alert('Quiz submitted! Add your scoring logic here.');
+    // Get selected options
+    const selectedOptions = Array.from(document.querySelectorAll('input[name="q3"]:checked'))
+    .map(option => option.value);
+    console.log(selectedOptions);
+
+// Correct answers
+const correctAnswers = ['c'];
+
+// Check if the selected answers match the correct answers
+const isCorrect = selectedOptions.length === correctAnswers.length &&
+                  selectedOptions.every(value => correctAnswers.includes(value));
+
+// Show feedback
+const feedback = document.getElementById('f6');
+if (isCorrect) {
+    feedback.textContent = 'Helyes válasz! Hanuka mindegyik napján teljes hallélt mondunk.Néhány szidurba rosszul van beleírva, mivel ros chódeskor általában fél hallélt mondunk kivéve akkor ha hanukára esik. Az ehhez a kérdéshez tartozó betű a D.';
+    feedback.classList.add('correct');
+    feedback.classList.remove('incorrect');
+} else {
+    feedback.textContent = 'Rossz válasz.';
+    feedback.classList.add('incorrect');
+    feedback.classList.remove('correct');
+}
+feedback.style.display = 'flex';
+});
