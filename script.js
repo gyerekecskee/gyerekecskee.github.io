@@ -104,9 +104,7 @@ function check1Answer() {
             feedback.textContent = "Rossz válasz";
             feedback.className = 'feedback incorrect';
         }
-    }// else {
-       // feedback.style.display = 'none';
-    //}
+    }
 }
 /*
 h2
@@ -261,7 +259,7 @@ function initializeItems() {
 /*
 h3
 */
-document.getElementById('quiz-form').addEventListener('submit', function(e) {
+document.getElementById('latke-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
     // Add your logic here to process the answers
@@ -290,3 +288,69 @@ if (isCorrect) {
 }
 feedback.style.display = 'flex';
 });
+
+/*
+h4
+*/
+
+document.getElementById('kosher-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Add your logic here to process the answers
+    //alert('Quiz submitted! Add your scoring logic here.');
+    // Get selected options
+    const selectedOptions = Array.from(document.querySelectorAll('input[name="q2"]:checked'))
+    .map(option => option.value);
+    console.log(selectedOptions);
+
+// Correct answers
+const correctAnswers = ['b', 'c', 'd', 'h'];
+
+// Check if the selected answers match the correct answers
+const isCorrect = selectedOptions.length === correctAnswers.length &&
+                  selectedOptions.every(value => correctAnswers.includes(value));
+
+// Show feedback
+const feedback = document.getElementById('f4');
+if (isCorrect) {
+    feedback.textContent = 'Helyes válasz! A kóser hanukia gyertyáinak azonos, 3 (kb. 24 cm) és 10 (kb. 80 cm) tefách közötti magasságban kell lenniük. Az első hanukián különböző magasságban vannak a gyertyák, az ötödiken túl magasan, a hatodik egy menóra, nem egy hanukia (figyelem, egy menórát semmire sem szabad használni, még dekorációnak sem), a hetediken pedig megint különböző magasságokban vannak a gyertyák. A gyertyáknak nem kell egy egyenesre esniük, ezért a harmadik és negyedik hanukia is kóser. Az ehhez a kérdéshez tartozó betű az A.';
+    feedback.classList.add('correct');
+    feedback.classList.remove('incorrect');
+} else {
+    feedback.textContent = 'Rossz válasz.';
+    feedback.classList.add('incorrect');
+    feedback.classList.remove('correct');
+}
+feedback.style.display = 'flex';
+});
+
+/*
+h5
+*/
+
+const input5 = document.getElementById('a5');
+const feedback5 = document.getElementById('f5');
+console.log(input);
+
+input.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        check5Answer();
+    }
+});
+
+function check5Answer() {
+    const userAnswer = input5.value;
+    console.log(userAnswer);
+    console.log(input5.value);
+    if (input5.value.length > 0) {
+        feedback5.style.display = 'flex';
+        
+        //if (userAnswer === correctAnswer) {
+            feedback5.textContent = "Jó válasz. Erre a kérdésre nem igazán tudjuk leellenőrizni a válaszodat. Sok magyarázat létezik erre a kérdésre, majd hanuka után kiteszünk egy rabbi által is megerősített választ a facebookunkra. Az ehhez a válaszhoz tartozó betű az A.";
+            feedback5.className = 'feedback correct';
+        //} else {
+            //feedback.textContent = "Rossz válasz";
+          //  feedback.className = 'feedback incorrect';
+        //}
+    }
+}

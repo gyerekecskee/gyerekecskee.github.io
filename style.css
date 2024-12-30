@@ -186,10 +186,6 @@ span {
 	/*justify-content: center;*/
 }
 
-/*.service-box:hover {
-	transform: scale(1.05);
-}*/
-
 .service-title {
 	font-size: 24px;
 	font-weight: light;
@@ -510,11 +506,55 @@ footer a img {
 	max-width: 100%;
 }
 
-#quiz-form {
+.quiz-form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 5px;
+}
+
+.kosher-img {
+	width: 100px;
+	height: auto;
+	border-radius: 5px;
+	display: block;
+	margin: 0 auto;
+}
+
+#kosher-options {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Two columns */
+	gap: 10px; /* Space between rows and columns */
+	width: 100%;
+  }
+
+#kosher-options .option input[type="checkbox"]{
+	display: none;
+}
+
+#kosher-options .option label {
+	display: inline-block;
+	cursor: pointer;
+	border: 2px solid transparent;
+	border-radius: 8px;
+	padding: 5px;
+	transition: all 0.3s ease;
+}
+
+#kosher-options .option label:hover {
+	border-color: #aaa;
+	transform: scale(2);
+}
+
+/*#kosher-options .option label:active {
+	transition-delay: 3s;
+	transform: scale(1.5); /* Scale up 1.5x 
+	filter: brightness(1.2); /* Optional: brighten the image 
+  }*/
+
+#kosher-options .option input[type="checkbox"]:checked + label {
+	border-color: #007bff;
+	box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
   @media (min-width: 800px) {
