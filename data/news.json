@@ -1,0 +1,36 @@
+{
+    "news": [
+      {
+        "id": "1",
+        "title": "R Micha szijjumja, Maszechesz Gittin. Vendégünk R Rabinowitz orthodox főrabbi.",
+        "description": "2023. szeptember 3-án a reggeli imát követően az Alma utcai Közösség rabbija, R Micha Jerusalmi befejezte a Talmud Gittin kötetének tanulásását. Ezt megünneplendő lakomát tartottunk az Alma utcában, ahol vendégünk volt R Aryeh Rabinowitz, a MAOIH főrabbija.",
+        "imageSource": "pictures/p1.jpeg",
+        "videoSource": "nv",
+        "createdAt": "2025-01-01T00:00:00.000Z"
+      },
+      {
+        "id": "2",
+        "title": "Befejeztük a Brachot első perekét.",
+        "description": "Több hónap kitartó tanulás után elérkeztünk a Talmud Brachot traktátusának második fejezetéhez. Hétfő esti tanulásainkon a Talmud aggadikus részeit tanulmányozzuk az Én Jáákov nevű kiadványból. Ez előtt még online tanuláson részt vehetünk Micha rabbival, akivel ugyanennek a traktásusnak a Misnáit tanuljuk Rambam magyarázataival.",
+        "imageSource": "pictures/brachot.jpeg",
+        "videoSource": "nv",
+        "createdAt": "2025-01-01T00:00:00.000Z"
+      },
+      {
+        "id": "3",
+        "title": "Brit az almában.",
+        "description": "Örömünnep volt nálunk, 6 évvel ezelőtt volt utoljára brisz az Alma utcában. A Cseh család második fiát léptettük Ábráhám szövetségébe. A mohel Rav Jehosua Adler volt, a kveterek R Zév Paskesz és Sáron, a szandek Rav Árje Mordecháj Rabinowitz, az ortodoxia főrabbija volt. A nevet R Micha Farnadi-Jerusalmi rabbink adta, míg a gyermeket Hegedüs Sault tartotta. A kisfiú a Jákov Elázár nevet kapta. Mazal Tov!",
+        "imageSource": "pictures/brit.jpeg",
+        "videoSource": "nv",
+        "createdAt": "2025-01-01T00:00:00.000Z"
+      },
+      {
+        "id": "4",
+        "title": "A maros utcai mészárlásról tartott megemlékezést az önkormányzat",
+        "description": "1945. január 12-én borzalmas tömeggyilkosságok helyszíne volt a Hegyvidék: a Maros utcai zsidókórházban, a Városmajor utcai Bíró Dániel Kórházban, valamint az Alma utcai szeretetotthonban védtelen emberek százait ölték meg a XII. kerületi nyilasok. A meggyilkoltakra emlékezve az egykori zsidókórház udvarán található emléktáblánál, valamint a második világháború kerületi áldozatainak városmajori (Mohácsi András, közösségünk tagja által tervezett) emlékművénél helyezte el koszorúit a Hegyvidéki Önkormányzat. Farnadi-Jerusálmi Micha rabbink szintén is beszélt az egybegyűltek előtt. Úgy látja, vannak, akik számára a tények nem fontosak, és negatív fényben tüntetik fel az emlékezést, mondván, egyeseknek „mindig csak ugyanaz jut az eszébe”. De ez nem így van, hiszen emlékezni kell ahhoz, hogy ne felejtsük el a szörnyűségeket, azok ne történhessenek meg ismét. A beszédről a felvételt itt láthatjátok:",
+        "imageSource": "pictures/maros.jpeg",
+        "videoSource": "n4",
+        "createdAt": "2025-01-01T00:00:00.000Z"
+      }
+    ]
+  }
