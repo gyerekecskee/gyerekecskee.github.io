@@ -388,3 +388,37 @@ if (isCorrect) {
 }
 feedback.style.display = 'flex';
 });
+/*
+h7
+*/
+
+document.getElementById('study-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Add your logic here to process the answers
+    //alert('Quiz submitted! Add your scoring logic here.');
+    // Get selected options
+    const selectedOptions = Array.from(document.querySelectorAll('input[name="q4"]:checked'))
+    .map(option => option.value);
+    console.log(selectedOptions);
+
+// Correct answers
+const correctAnswers = ['b'];
+
+// Check if the selected answers match the correct answers
+const isCorrect = selectedOptions.length === correctAnswers.length &&
+                  selectedOptions.every(value => correctAnswers.includes(value));
+
+// Show feedback
+const feedback = document.getElementById('f7');
+if (isCorrect) {
+    feedback.textContent = 'Gratulálok jó válasz. A tanulás fontos, ritkán nem szoktunk tanulni például Tisa Beávkor. 	Kevés helyen tartják a Nittel Nachtot (a karácsonyi nem tanulást) itt olvashattok róla többet (sajnos csak angolul): https://en.wikipedia.org/wiki/Nittel_Nacht Az ehhez a kérdéshez tertozó betű az O.';
+    feedback.classList.add('correct');
+    feedback.classList.remove('incorrect');
+} else {
+    feedback.textContent = 'Rossz válasz.';
+    feedback.classList.add('incorrect');
+    feedback.classList.remove('correct');
+}
+feedback.style.display = 'flex';
+});
