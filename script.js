@@ -27,8 +27,10 @@ document.addEventListener("DOMContentLoaded", function() {
             document.body.insertAdjacentHTML('beforeend', data);
         })
         .catch(error => console.error('Error loading header or footer:', error));
+        
+        loadNews();
 });
-
+/*
 document.querySelectorAll('.new').forEach(function(newsItem) {
     const titleElement = newsItem.querySelector('.new-title');
     const descriptionElement = newsItem.querySelector('.new-description');
@@ -43,6 +45,41 @@ document.querySelectorAll('.new').forEach(function(newsItem) {
     const href = `news.html?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&src=${encodeURIComponent(imgSource)}&vSrc=${encodeURIComponent(vidSource)}`;
     linkElement.setAttribute('href', href);
 });
+*/
+
+async function loadNews() {
+    console.log("loading news");
+    try {
+      const response = await fetch('/data/news.json');
+      const data = await response.json();
+      
+      data.news.forEach(news => {
+        const newsItem = document.createElement('div');
+        newsItem.className = 'new';
+        newsItem.innerHTML = `
+        <a href="#" class="new">
+            <img src="${news.imageSource}" alt="${news.videoSource || 'nv'}">
+            <div>
+                <div class="new-title">
+                    ${news.title}
+                </div>
+                <div class="new-description">
+                    ${news.description}
+                </div>
+            </div>
+        </a>
+        `;
+        
+        newsItem.addEventListener('click', () => {
+          window.location.href = `news.html?id=${news.id}`;
+        });
+        
+        document.querySelector('#news-blogs').appendChild(newsItem);
+      });
+    } catch (error) {
+      console.error('Error loading news:', error);
+    }
+}
 
 /*
 Scrolling for services.

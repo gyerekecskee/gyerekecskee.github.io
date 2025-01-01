@@ -2,7 +2,7 @@ function getQueryParameter(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
 }
-
+/*
 function loadNews() {
     const title = getQueryParameter('title');
     const description = getQueryParameter('description');
@@ -34,7 +34,7 @@ function loadNews() {
         document.getElementById('new-cover-title').textContent = "News image source not found";
     }
 }
-
+*/
 document.addEventListener("DOMContentLoaded", function() {
 
     // Load the header first
@@ -66,4 +66,31 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.error('Error loading header or footer:', error));
 });
 
-window.onload = loadNews;
+window.onload = loadSingleNews;
+
+async function loadSingleNews() {
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+      
+      const response = await fetch('/data/news.json');
+      const data = await response.json();
+      const news = data.news.find(item => item.id === id);
+      
+      if (news) {
+        document.getElementById('new-cover-title').textContent = news.title;
+        document.getElementById('news-description').textContent = news.description;
+        document.getElementById('news-image').src = news.imageSource;
+        
+        if (news.videoSource && news.videoSource !== 'nv') {
+          document.getElementById('news-video').src = `videos/${news.videoSource}.mp4`;
+        } else {
+          document.getElementById('news-video')?.remove();
+        }
+      } else {
+        document.getElementById('new-cover-title').textContent = "News not found";
+      }
+    } catch (error) {
+      console.error('Error loading news:', error);
+    }
+  }
