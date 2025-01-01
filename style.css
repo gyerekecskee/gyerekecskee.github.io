@@ -196,9 +196,10 @@ span {
 	text-align-last: center;
 }
 
-.service-box a {
+.yellow-button {
 	background-color: #eec355;
 	padding: 11px;
+	width: fit-content;
 }
 
 #upcoming-events {
