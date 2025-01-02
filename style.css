@@ -382,14 +382,16 @@ footer a img {
 }
 
 #new-cover-title {
-	/*font-size: 120px;*/
+	margin-top: 20vw;
 	max-width: 100%;
-	-webkit-text-stroke: #f8f8f8 1px;
+	-webkit-text-stroke: #f8f8f8 0.5px;
+	font-size: 6vw;
 }
 
 #title-line {
 	margin-top: 50px;
-	margin-bottom: 100px;
+	margin-bottom: 6vh;
+	/*margin-bottom: 100px;*/
 	width: 100%;
 	height: 1px;
 	background: black;
@@ -409,7 +411,8 @@ footer a img {
 }
 
   #news-description {
-	font-size: xx-large;
+	/*font-size: xx-large;*/
+	font-size: 5vw;
 	text-align: justify;
 	font-family: Wix;
   }
@@ -559,6 +562,16 @@ footer a img {
 }
 
   @media (min-width: 800px) {
+	#new-cover-title {
+		margin-top: 120px;
+		-webkit-text-stroke: #f8f8f8 1px;
+	}
+	#news-description {
+		font-size: xx-large;
+		/*font-size: 5vw;
+		text-align: justify;
+		font-family: Wix;*/
+	  }
 	#service-boxes {
 	  flex-direction: row;
 	}
