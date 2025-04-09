@@ -14,12 +14,15 @@ header {
 	background-color: #fdffef;
 	border-bottom: 1px solid #e6e3e3;
 	/*width: calc(100% - 2cm);*/
-	height: 1cm;
+	/*height: 1cm;*/
 	font-weight: bold;
 	display: flex;
-	align-items: center;
-	padding-left: 0.5cm;
-	padding-right: 0.5cm;
+	flex-direction: column;
+	gap: 5px;
+	/*align-items: center;*/
+	padding: 0.5cm;
+	/*padding-right: 0.5cm;*/
+	/*padding-bottom: 0.5cm;*/
 	margin: 0.5cm;
 	justify-content: space-between;
 	z-index: 2;
@@ -28,11 +31,17 @@ header {
 	right: 0.5cm;
 }
 
-header a img {
+#og {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#og a img {
 	height: 16px;
 }
 
-header a {
+#og a {
 	display: flex;
 	align-items: center;
 }
@@ -41,6 +50,12 @@ header a {
 	display: flex;
 	gap: 20px;
 	align-items: center;
+}
+
+#extra-message {
+	background-color: #f3ddb0;
+	border: 0.1px solid black;
+	font-weight: normal;
 }
 
 #main {
