@@ -225,7 +225,7 @@ span {
 	flex-direction: column-reverse;
 	border: 1px solid black;
 	display: flex;
-	height: 600px;
+	min-height: 600px;
 	margin: 3vw;
 	gap: 40px;
 	font-family: Wix;
