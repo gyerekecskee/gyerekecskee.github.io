@@ -262,7 +262,7 @@ span {
 
 #news-blogs {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
 	justify-content: space-between;
 	margin-top: 60px;
 	width: 100%;
@@ -601,7 +601,7 @@ footer a img {
 		flex-direction: row;
 	}
 	#news-blogs {
-		flex-direction: row;
+		flex-direction: row-reverse;
 	}
   }
 
